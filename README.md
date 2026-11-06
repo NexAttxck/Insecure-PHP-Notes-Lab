@@ -10,7 +10,6 @@ Security-review lab project (Integrative Programming and Technologies). Start fr
 - `config.php`: settings from environment variables. No credentials in code.
 - `views/page.php`: HTML template; every dynamic value is escaped.
 - `schema.sql`: tables and two synthetic users (bcrypt hashes).
-- `tests/smoke.php`: two-user security checks against the running server.
 
 ## Local setup
 
@@ -20,7 +19,6 @@ Security-review lab project (Integrative Programming and Technologies). Start fr
 4. Set `LAB_DB_USER` and `LAB_DB_PASSWORD` in your shell (PowerShell: `$env:LAB_DB_USER = '...'`). The app refuses to start without them. Do not commit them.
 5. From this folder: `php -S 127.0.0.1:8000`, then open `http://127.0.0.1:8000`.
 6. Synthetic accounts (throwaway): `alex@example.test` / `LabOnly-Alex-123`, `sam@example.test` / `LabOnly-Sam-456`.
-7. Run the checks with the server running: `php tests/smoke.php`.
 
 Optional: `LAB_DB_HOST`, `LAB_DB_NAME`, `LAB_ALLOWED_ORIGINS` (comma-separated, default `http://127.0.0.1:8000,http://localhost:8000`).
 
